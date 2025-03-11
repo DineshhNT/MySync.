@@ -1,12 +1,9 @@
 import { motion } from "framer-motion";
 import { Github, InstagramIcon, Linkedin, FileIcon } from "lucide-react";
 import { useState, useEffect } from "react";
-
 import Images from "./Images";
 
-
 const Hero = () => {
-  const cvFilePath = "/assests/DINESH N T CV.pdf";
   const roles = ["AI/ML Developer", "Front-End Developer"];
   const [roleIndex, setRoleIndex] = useState(0);
   const [text, setText] = useState("");
@@ -41,7 +38,6 @@ const Hero = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-20">
-          
           {/* Social Media Icons */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -120,12 +116,12 @@ const Hero = () => {
             </motion.a>
           </motion.div>
 
-          {/* Profile Image Section */}
+          {/* Profile Image Section - Adjusted padding for better mobile responsiveness */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 px-4 lg:px-0 lg:-ml-6 lg:pr-20"
+            className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 px-4 lg:px-0 lg:-ml-6 lg:pr-20 pt-24 sm:pt-20 md:pt-16 lg:pt-0" // Increased top padding for mobile
           >
             <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-[24rem] lg:h-[24rem] mx-auto">
               <img
@@ -143,4 +139,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

@@ -60,7 +60,6 @@ const Journey = () => {
           Experience & Education
         </motion.h2>
 
-        {/* Buttons */}
         <div className="flex justify-center mb-8 space-x-4">
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -89,7 +88,6 @@ const Journey = () => {
           </motion.button>
         </div>
 
-        {/* Content */}
         <AnimatePresence mode="wait">
           <motion.div key={activeTab} className="space-y-6">
             {(activeTab === "education" ? educationData : experienceData).map((item, index) => (
@@ -99,29 +97,42 @@ const Journey = () => {
                 onMouseEnter={() => setHoverIndex(index)}
                 onMouseLeave={() => setHoverIndex(null)}
               >
-                <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 rounded-full overflow-hidden shadow-lg">
-                    <img src={item.logo} alt={item.title} className="w-full h-full object-cover" />
+                <div className="flex items-start space-x-4">
+                  <div className="w-16 h-16 rounded-full overflow-hidden shadow-lg flex-shrink-0 sticky top-0">
+                    <img 
+                      src={item.logo} 
+                      alt={item.title} 
+                      className="w-full h-full object-cover rounded-full"
+                    />
                   </div>
 
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <div className="flex justify-between items-center">
-                      <motion.h3 className="text-lg font-bold text-gray-800 dark:text-white">
+                      <motion.h3 className="text-lg font-bold text-gray-800 dark:text-white truncate">
                         {item.title}
                       </motion.h3>
-                      <span className="text-sm text-gray-600 dark:text-gray-400">{item.year}</span>
+                      <span className="text-sm text-gray-600 dark:text-gray-400 ml-2 flex-shrink-0">
+                        {item.year}
+                      </span>
                     </div>
+                    
                     {"role" in item && (
-                      <p className="text-gray-600 dark:text-gray-400 font-medium mt-1">{item.role}</p>
+                      <p className="text-gray-600 dark:text-gray-400 font-medium mt-1">
+                        {item.role}
+                      </p>
                     )}
+                    
                     {"percentage" in item && (
-                      <p className="text-gray-600 dark:text-gray-400 mt-1">{item.percentage}</p>
+                      <p className="text-gray-600 dark:text-gray-400 mt-1">
+                        {item.percentage}
+                      </p>
                     )}
+                    
                     <motion.p
                       className="text-gray-600 dark:text-gray-400 mt-2 text-sm"
                       style={{
                         display: "-webkit-box",
-                        WebkitLineClamp: hoverIndex === index ? "unset" : 3, 
+                        WebkitLineClamp: hoverIndex === index ? "unset" : 3,
                         WebkitBoxOrient: "vertical",
                         overflow: "hidden",
                         transition: "all 0.3s ease-in-out",
@@ -129,8 +140,11 @@ const Journey = () => {
                     >
                       {item.fullDescription}
                     </motion.p>
+                    
                     {"skills" in item && hoverIndex === index && (
-                      <p className="text-gray-600 dark:text-white font-medium mt-2">{item.skills}</p>
+                      <p className="text-gray-600 dark:text-white font-medium mt-2">
+                        {item.skills}
+                      </p>
                     )}
                   </div>
                 </div>

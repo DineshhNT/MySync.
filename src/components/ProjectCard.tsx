@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Heart, ExternalLink } from 'lucide-react';
 import Images from "./Images";
@@ -36,21 +36,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
-      if (isModalOpen) {
-        closeModal();
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('touchstart', handleClickOutside);
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('touchstart', handleClickOutside);
-    };
-  }, [isModalOpen]);
+  const handleModalClick = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent event propagation
+  };
 
   return (
     <>
@@ -117,13 +105,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-start justify-center z-50 p-2 sm:p-3 md:p-4 pt-10 sm:pt-15 md:pt-20">
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-start justify-center z-50 p-2 sm:p-3 md:p-4 pt-10 sm:pt-15 md:pt-20"
+          onClick={closeModal} // Close modal when clicking outside
+        >
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.1 }}
             className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden w-[90%] sm:w-[85%] md:w-[80%] max-w-xl mx-auto relative flex flex-col"
+            onClick={handleModalClick} // Stop propagation when clicking inside modal
           >
             {/* Scrollable Content */}
             <div className="overflow-y-auto max-h-[70vh] sm:max-h-[75vh] md:max-h-[80vh] p-3 sm:p-4 md:p-5 scrollbar-thin scrollbar-thumb-gray-400 dark:scrollbar-thumb-gray-600 scrollbar-track-gray-100 dark:scrollbar-track-gray-800">
