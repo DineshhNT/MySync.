@@ -31,6 +31,29 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, [text, isDeleting, roleIndex, roles]);
 
+  const imageAnimation = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const rotatingBorderAnimation = {
+    animate: {
+      rotate: 360,
+      transition: {
+        duration: 8,
+        repeat: Infinity,
+        ease: "linear"
+      }
+    }
+  };
+
   return (
     <section
       id="home"
@@ -38,6 +61,7 @@ const Hero = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-20">
+          
           {/* Social Media Icons */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -88,12 +112,14 @@ const Hero = () => {
                 Dinesh N T
               </span>
             </h1>
+
+            {/* Typing Animation */}
             <p className="text-lg sm:text-xl md:text-2xl font-medium text-gray-900 dark:text-white">
               <span className="dark:text-white text-black">I am a </span>
               <span className="font-bold text-1xl sm:text-2xl md:text-3xl transition-all duration-500 dark:text-white text-black">
                 {text}
               </span>
-              <span className="font-bold text-3xl md:text-4xl dark:text-white text-black">&nbsp;|</span>
+              <span className="font-bold text-3xl md:text-4xl dark:text-white text-black animate-pulse">&nbsp;|</span>
             </p>
 
             <p className="text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 leading-relaxed px-4 lg:px-0">
@@ -113,19 +139,32 @@ const Hero = () => {
               Download CV
             </motion.a>
           </motion.div>
+
+          {/* Hero Image Section with New Animation */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 px-4 lg:px-0 lg:-ml-6 lg:pr-20 pt-24 sm:pt-20 md:pt-16 lg:pt-0" // Increased top padding for mobile
+            initial="hidden"
+            animate="visible"
+            variants={imageAnimation}
+            className="relative w-full sm:w-2/3 md:w-1/2 lg:w-1/3 px-4 lg:px-0 lg:-ml-6 lg:pr-20"
           >
             <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-[24rem] lg:h-[24rem] mx-auto">
-              <img
-                src={Images.Heroimage}
-                alt="Profile"
-                className="rounded-full object-cover w-full h-full shadow-2xl  ring-primary-500/50"
-              />
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary-500/20 to-secondary-500/20"></div>
+              {/* Rotating border animation */}
+              <motion.div
+                variants={rotatingBorderAnimation}
+                animate="animate"
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 p-1"
+              >
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary-500/30 to-secondary-500/30 backdrop-blur-sm"></div>
+              </motion.div>
+              
+              {/* Image container */}
+              <div className="absolute inset-[4px] rounded-full overflow-hidden">
+                <img
+                  src={Images.Heroimage}
+                  alt="Profile"
+                  className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700"
+                />
+              </div>
             </div>
           </motion.div>
         </div>

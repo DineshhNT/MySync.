@@ -1,4 +1,4 @@
-import Heroimage from "../../images/My/Heroimage.png";
+import Heroimage from "../../images/My/Heroimage.jpg";
 
 import cv from "../../assests/DINESH N T CV.pdf";
 
