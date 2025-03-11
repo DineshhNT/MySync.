@@ -28,6 +28,7 @@ import GitHub from "../../images/Skills/Others/GitHub.png";
 import Photoshop from "../../images/Skills/Others/Photoshop.png";
 import VSCode from "../../images/Skills/Others/VS Code.png";
 
+
 import College from "../../images/Institutionlogo/college_logo.png";
 import School from "../../images/Institutionlogo/school_logo.png";
 import Izet from "../../images/Institutionlogo/izet_logo.jpeg";

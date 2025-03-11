@@ -77,7 +77,7 @@ function App() {
         { name: 'Canva', icon: Images.Others.Canva },
         { name: 'VS Code', icon: Images.Others.VSCode },
         { name: 'Photoshop', icon: Images.Others.Photoshop},
-        { name: 'Figma', icon: Images.Others.Figma}
+        { name: 'Figma', icon: Images.Others.Figma},
       ]
     }
   ];
@@ -165,7 +165,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
-      {/* Theme Toggle */}
       <div className="fixed bottom-4 right-4 z-50">
         <ThemeToggle isDark={isDark} toggleTheme={toggleTheme} />
       </div>

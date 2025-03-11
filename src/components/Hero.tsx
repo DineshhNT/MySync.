@@ -88,8 +88,6 @@ const Hero = () => {
                 Dinesh N T
               </span>
             </h1>
-
-            {/* Typing Animation */}
             <p className="text-lg sm:text-xl md:text-2xl font-medium text-gray-900 dark:text-white">
               <span className="dark:text-white text-black">I am a </span>
               <span className="font-bold text-1xl sm:text-2xl md:text-3xl transition-all duration-500 dark:text-white text-black">
