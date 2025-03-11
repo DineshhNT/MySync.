@@ -1,4 +1,5 @@
 import { Github, InstagramIcon, Linkedin } from 'lucide-react';
+import Images from './Images';
 
 const Footer = () => {
   const scrollToSection = (section: string) => {
@@ -10,10 +11,9 @@ const Footer = () => {
     <footer className="bg-white dark:bg-gray-900 text-center py-6 sm:py-8 shadow-inner">
       {/* Logo */}
       <div className="flex justify-center">
-        <img src="/images/Gradient Modern Technology Company Developers Logo.png" alt="Logo" className="h-12 sm:h-16 md:h-20" />
+        <img src={Images.Dlogo}  alt="Logo" className="h-12 sm:h-16 md:h-20" />
       </div>
 
-      {/* Name with Gradient Text */}
       <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mt-2">
         Dinesh N T
       </h2>

@@ -8,6 +8,7 @@ import ProjectCard from './components/ProjectCard';
 import ContactForm from './components/ContactForm';
 import Footer from "./components/Footer";
 import ThemeToggle from './components/ThemeToggle';
+import Images from './components/Images';
 
 function App() {
   const [isDark, setIsDark] = useState(() => {
@@ -37,46 +38,46 @@ function App() {
       icon: <Code size={25} />,
       title: 'Front-End',
       subSkills: [
-        { name: 'HTML', icon: '../images/html.png' },
-        { name: 'CSS', icon: '../images/CSS.png' },
-        { name: 'JavaScript', icon: '../images/js.png' },
-        { name: 'React', icon: '../images/REACT.png' },
-        { name: 'Tailwind', icon: '../images/icons8-tailwind-css-48.png' },
-        { name: 'Bootstrap', icon: '../images/icons8-bootstrap-logo-50.png'}
+        { name: 'HTML', icon: Images.FrontEnd.HTML },
+        { name: 'CSS', icon: Images.FrontEnd.CSS },
+        { name: 'JavaScript', icon: Images.FrontEnd.JS },
+        { name: 'React', icon: Images.FrontEnd.React },
+        { name: 'Tailwind', icon: Images.FrontEnd.Tailwind },
+        { name: 'Bootstrap', icon: Images.FrontEnd.Bootstrap},
       ]
     },
     {
       icon: <Database size={24} />,
       title: 'Back-End',
       subSkills: [
-        { name: 'Python', icon: '../images/python.png' },
-        { name: 'Node.js', icon: '../images/icons8-nodejs-100.png' },
-        { name: 'MySQL', icon: '../images/icons8-mysql-50.png' },
-        { name: 'MongoDB', icon: '../images/icons8-mongo-db-50.png' },
-        { name: 'Flask', icon: '../images/icons8-flask-50.png'},
-        { name: 'FireBase', icon: '../images/icons8-firebase-50.png'},
+        { name: 'Python', icon: Images.BackEnd.Python },
+        { name: 'Node.js', icon: Images.BackEnd.NodeJS },
+        { name: 'MySQL', icon: Images.BackEnd.MySql },
+        { name: 'MongoDB', icon: Images.BackEnd.MongoDB },
+        { name: 'Flask', icon: Images.BackEnd.Flask},
+        { name: 'FireBase', icon: Images.BackEnd.FireBase},
       ]
     },
     {
       icon: <Brain size={25} />,
       title: 'AI/ML',
       subSkills: [
-        { name: 'TensorFlow', icon: '../images/icons8-tensorflow-50.png' },
-        { name: 'PyTorch', icon: '../images/icons8-pytorch-48.png' },
-        { name: 'Pandas', icon: '../images/icons8-pandas-50.png' },
-        { name: 'Numpy', icon: '../images/icons8-numpy-50.png'},
-        { name: 'Algorithms', icon: '../images/icons8-algorithms-100.png'},
+        { name: 'TensorFlow', icon: Images.AIML.TensorFlow },
+        { name: 'PyTorch', icon: Images.AIML.PyTorch },
+        { name: 'Pandas', icon: Images.AIML.Pandas },
+        { name: 'Numpy', icon: Images.AIML.Numpy},
+        { name: 'Algorithms', icon: Images.AIML.Algorithms},
       ]
     },
     {
       icon: <Palette size={25} />,
       title: 'Other Skills',
       subSkills: [
-        { name: 'GitHub', icon: '../images/icons8-github-100.png' },
-        { name: 'Canva', icon: '../images/icons8-canva-48.png' },
-        { name: 'VS Code', icon: '../images/icons8-visual-studio-code-2019-100.png' },
-        { name: 'Photoshop', icon: '../images/icons8-photoshop-50.png'},
-        { name: 'Figma', icon: '../images/icons8-figma-50.png'}
+        { name: 'GitHub', icon: Images.Others.GitHub },
+        { name: 'Canva', icon: Images.Others.Canva },
+        { name: 'VS Code', icon: Images.Others.VSCode },
+        { name: 'Photoshop', icon: Images.Others.Photoshop},
+        { name: 'Figma', icon: Images.Others.Figma}
       ]
     }
   ];
@@ -85,7 +86,7 @@ function App() {
     {
       title: 'AI Med-Assist',
       description: 'AI-Med Assist is an AI-powered platform that provides personalized medical guidance and symptom analysis using NLP and Machine Learning. It integrates IoT devices for real-time health monitoring and offers tailored health recommendations. Built with Python, Flask, and a responsive frontend using HTML, CSS, and JavaScript, the platform ensures a secure, user-friendly, and efficient healthcare experience.',
-      image: '/images/4.jpg',
+      image: Images.ProjectThumbs.AI_Med_Assist,
       technologies: ['Python', 'HTML', 'CSS', 'JavaScript', 'Flask', 'IoT'],
       tags: ['Full-Stack', 'AI Med Bot'],
       githubUrl: 'https://github.com',
@@ -94,14 +95,14 @@ function App() {
       teamMembers: [
         {
           name: 'Deenathayalan C K',
-          image: '/images/146226745.jpeg'
+          image: Images.Teammembers.member2
         },
       ]
     },
     {
       title: 'Portfolio',
       description: 'responsive portfolio is a dynamic and visually engaging web application built with React, Vite, Tailwind CSS, and TypeScript to showcase my skills, projects, and professional journey. Designed with a clean and modern UI, it offers a fully responsive experience across all devices, smooth animations, and interactive elements. Leveraging Vite for fast performance and TypeScript for type safety, this portfolio highlights my expertise in creating efficient, scalable, and visually appealing web applications.',
-      image: '/images/1.jpg',
+      image: Images.ProjectThumbs.MySync,
       technologies: ['React', 'Vite', 'Tailwind CSS', 'TypeScript'],
       tags: ['React', 'Portfolio'],
       githubUrl: 'https://github.com',
@@ -111,7 +112,7 @@ function App() {
     {
       title: 'Glaucoma Detection',
       description: 'Glaucoma Detection Using CNN is an AI system that identifies glaucoma from retinal images using Convolutional Neural Networks. Built with TensorFlow/Keras and Python, it leverages deep learning to analyze eye scans for glaucoma-related features with high accuracy. Trained on a dataset of retinal images, it enables early diagnosis to prevent vision loss. The system utilizes OpenCV for image preprocessing, ensuring clear and interpretable results',
-      image: '/images/2.jpg',
+      image: Images.ProjectThumbs.DeepSight,
       technologies: ['CNN', 'Python', 'TensorFlow', 'Machine Learning', 'Deep Learning'],
       tags: ['Glaucoma Detection', 'Deep Learning'],
       githubUrl: 'https://github.com',
@@ -120,14 +121,14 @@ function App() {
       teamMembers: [
         {
           name: 'Deenathayalan C K',
-          image: '/images/146226745.jpeg'
+          image: Images.Teammembers.member2
         }
       ]
     },
     {
       title: 'Mushroom Classifier',
       description: 'Mushroom Edibility Classifier detects poisonous mushrooms. It uses an SVM model in Python to classify edible and toxic mushrooms accurately. Trained on a labeled dataset, it identifies key features for classification. Streamlit is used to build an interactive web app for easy accessibility. The model helps users make informed decisions about mushroom safety.',
-      image: '/images/6.jpg',
+      image: Images.ProjectThumbs.Mushroom_Classifier,
       technologies: ['Python', 'Streamlit', 'Deep Learning', 'Machine Learning'],
       tags: ['Mushroom Classification', 'Deep Learning'],
       githubUrl: 'https://github.com',
@@ -137,7 +138,7 @@ function App() {
     {
       title: 'Sentiment X',
       description: 'Sentiment X for E-commerce reviews is an AI-driven system that analyzes customer feedback. It uses NLP techniques to classify reviews as positive, negative, or neutral. Python and word clouds help visualize sentiment distribution effectively. Trained on product reviews, it extracts insights to improve customer experience. The model aids businesses in understanding customer opinions and trends.',
-      image: '/images/3.jpg',
+      image: Images.ProjectThumbs.SentimentX,
       technologies: ['Python', 'NLP', 'Word Cloud', 'Machine Learning'],
       tags: ['E-Commerce Reviews', 'Machine Learning'],
       githubUrl: 'https://github.com',
@@ -146,14 +147,14 @@ function App() {
       teamMembers: [
         {
           name: 'Deenathayalan C K',
-          image: '/images/146226745.jpeg'
+          image: Images.Teammembers.member2
         }
       ]
     },
     {
       title: 'Code Flux',
       description: 'Code Flux using Python is a system that converts data into encoded or decoded formats. It utilizes encoding algorithms to transform text or numbers securely. Python libraries like base64, hashlib, and custom logic handle the process. Decoding retrieves the original data for secure communication or storage. The system ensures data integrity and confidentiality in various applications',
-      image: '/images/5.jpg',
+      image: Images.ProjectThumbs.ED,
       technologies: ['Python', 'Encoder', 'Decoder', 'AI', 'Transformation'],
       tags: ['AI', 'Data Transformation'],
       githubUrl: 'https://github.com',

@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { Github, InstagramIcon, Linkedin, FileIcon } from "lucide-react";
 import { useState, useEffect } from "react";
-import ProfilePic from '../../images/myimage1.jpg'
+
+import Images from "./Images";
+
 
 const Hero = () => {
   const cvFilePath = "/assests/DINESH N T CV.pdf";
@@ -9,12 +11,12 @@ const Hero = () => {
   const [roleIndex, setRoleIndex] = useState(0);
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const typingSpeed = 120; // Slower typing speed for better readability
-  const deletingSpeed = 70; // Slightly slower erasing speed
-  const delayBetweenWords = 1300; // Delay before erasing
+  const typingSpeed = 120; 
+  const deletingSpeed = 70;
+  const delayBetweenWords = 1300; 
 
   useEffect(() => {
-    let timeout;
+    let timeout = 0;
 
     if (!isDeleting && text === roles[roleIndex]) {
       timeout = setTimeout(() => setIsDeleting(true), delayBetweenWords);
@@ -107,7 +109,7 @@ const Hero = () => {
             </p>
 
             <motion.a
-              href={cvFilePath}
+              href={Images.cv}
               download="DINESH N T CV.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -127,7 +129,7 @@ const Hero = () => {
           >
             <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-[24rem] lg:h-[24rem] mx-auto">
               <img
-                src=""
+                src={Images.Heroimage}
                 alt="Profile"
                 className="rounded-full object-cover w-full h-full shadow-2xl ring-4 ring-primary-500/50"
               />

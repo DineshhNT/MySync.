@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Images from "./Images";
 
 const educationData = [
   {
@@ -9,7 +10,7 @@ const educationData = [
     shortDescription: "Pursuing a Bachelor's degree in AI & Data Science...",
     fullDescription:
       "I am currently pursuing a Bachelor's degree in Artificial Intelligence & Data Science at Kathir College of Engineering, with a current academic score of 76% up to the 7th semester. Working on various projects has provided me with hands-on experience in developing AI, Machine Learning, and Web Development fields",
-    logo: "/images/college_logo.png",
+    logo: Images.InstitutionLogos.College,
   },
   {
     title: "Sri Gopal Naidu Hr.Sec.School",
@@ -17,7 +18,7 @@ const educationData = [
     percentage: "Grade : 86.04%",
     shortDescription: "Higher Secondary Education...",
     fullDescription: "I completed my high school education at Sri Gopal Naidu Higher Secondary School, where I studied Mathematics with Computer Science.",
-    logo: "/images/school_logo.png",
+    logo: Images.InstitutionLogos.School,
   },
 ];
 
@@ -30,7 +31,7 @@ const experienceData = [
     fullDescription:
       "I am working on and developing full-stack applications for various real-time projects, gaining hands-on experience in both front-end and back-end technologies.",
     skills: "Skills: ReactJS - NodeJS - MySql",
-    logo: "/images/izet_logo.jpeg",
+    logo: Images.InstitutionLogos.Izet,
   },
   {
     title: "AI/ML Intern",
@@ -40,7 +41,7 @@ const experienceData = [
     fullDescription:
       "I have worked on AI and ML prediction projects, gaining hands-on experience in model development, data preprocessing, and deployment. These projects have enhanced my ability to build efficient and scalable AI/ML solutions.",
     skills: "Skills: AI - Machine Learning - Deep Learning",
-    logo: "/images/internpe_logo.jpeg",
+    logo: Images.InstitutionLogos.Internpe,
   },
 ];
 
@@ -116,13 +117,11 @@ const Journey = () => {
                     {"percentage" in item && (
                       <p className="text-gray-600 dark:text-gray-400 mt-1">{item.percentage}</p>
                     )}
-
-                    {/* Description with hover effect */}
                     <motion.p
                       className="text-gray-600 dark:text-gray-400 mt-2 text-sm"
                       style={{
                         display: "-webkit-box",
-                        WebkitLineClamp: hoverIndex === index ? "unset" : 3, // Show full details on hover
+                        WebkitLineClamp: hoverIndex === index ? "unset" : 3, 
                         WebkitBoxOrient: "vertical",
                         overflow: "hidden",
                         transition: "all 0.3s ease-in-out",

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Heart, ExternalLink } from 'lucide-react';
+import Images from "./Images";
 
 interface TeamMember {
   name: string;
@@ -167,7 +168,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     {/* Your Image - Always shown */}
                     <div className="flex flex-col items-center">
                       <img
-                        src="/images/myimage1.jpg"
+                        src={Images.Heroimage}
                         alt="myimage1"
                         className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full object-cover mb-1 sm:mb-2"
                       />
