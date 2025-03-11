@@ -105,8 +105,8 @@ function App() {
       image: Images.ProjectThumbs.MySync,
       technologies: ['React', 'Vite', 'Tailwind CSS', 'TypeScript'],
       tags: ['React', 'Portfolio'],
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://example.com',
+      githubUrl: 'https://github.com/DineshhNT/MySync.',
+      liveUrl: 'https://dineshhnt.github.io/MySync./',
       showTeam: false
     },
     {
@@ -115,8 +115,8 @@ function App() {
       image: Images.ProjectThumbs.DeepSight,
       technologies: ['CNN', 'Python', 'TensorFlow', 'Machine Learning', 'Deep Learning'],
       tags: ['Glaucoma Detection', 'Deep Learning'],
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://example.com',
+      githubUrl: 'https://github.com/DineshhNT/Glaucoma-Disease-Detection-using-CNN',
+      liveUrl: 'https://github.com/DineshhNT',
       showTeam: true,
       teamMembers: [
         {
@@ -141,8 +141,8 @@ function App() {
       image: Images.ProjectThumbs.SentimentX,
       technologies: ['Python', 'NLP', 'Word Cloud', 'Machine Learning'],
       tags: ['E-Commerce Reviews', 'Machine Learning'],
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://example.com',
+      githubUrl: 'https://github.com/DineshhNT/SENTIMENTAL-ANALYSIS-USING-PYTHON',
+      liveUrl: 'https://github.com/DineshhNT',
       showTeam: true,
       teamMembers: [
         {
@@ -157,8 +157,8 @@ function App() {
       image: Images.ProjectThumbs.ED,
       technologies: ['Python', 'Encoder', 'Decoder', 'AI', 'Transformation'],
       tags: ['AI', 'Data Transformation'],
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://example.com',
+      githubUrl: 'https://github.com/DineshhNT',
+      liveUrl: 'https://github.com/DineshhNT',
       showTeam: true,
     }
   ];
