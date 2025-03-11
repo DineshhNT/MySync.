@@ -100,7 +100,7 @@ function App() {
       ]
     },
     {
-      title: 'Portfolio',
+      title: 'My Sync.',
       description: 'responsive portfolio is a dynamic and visually engaging web application built with React, Vite, Tailwind CSS, and TypeScript to showcase my skills, projects, and professional journey. Designed with a clean and modern UI, it offers a fully responsive experience across all devices, smooth animations, and interactive elements. Leveraging Vite for fast performance and TypeScript for type safety, this portfolio highlights my expertise in creating efficient, scalable, and visually appealing web applications.',
       image: Images.ProjectThumbs.MySync,
       technologies: ['React', 'Vite', 'Tailwind CSS', 'TypeScript'],
@@ -110,14 +110,14 @@ function App() {
       showTeam: false
     },
     {
-      title: 'Glaucoma Detection',
+      title: 'Deep Sight',
       description: 'Glaucoma Detection Using CNN is an AI system that identifies glaucoma from retinal images using Convolutional Neural Networks. Built with TensorFlow/Keras and Python, it leverages deep learning to analyze eye scans for glaucoma-related features with high accuracy. Trained on a dataset of retinal images, it enables early diagnosis to prevent vision loss. The system utilizes OpenCV for image preprocessing, ensuring clear and interpretable results',
       image: Images.ProjectThumbs.DeepSight,
       technologies: ['CNN', 'Python', 'TensorFlow', 'Machine Learning', 'Deep Learning'],
       tags: ['Glaucoma Detection', 'Deep Learning'],
       githubUrl: 'https://github.com/DineshhNT/Glaucoma-Disease-Detection-using-CNN',
       liveUrl: 'https://github.com/DineshhNT',
-      showTeam: true,
+      showTeam: false,
       teamMembers: [
         {
           name: 'Deenathayalan C K',

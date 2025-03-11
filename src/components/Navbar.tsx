@@ -38,7 +38,7 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: isVisible ? 0 : "-100%" }}
-      transition={{ duration: 0.15, ease: "easeInOut" }} // Faster transition
+      transition={{ duration: 0.15, ease: "easeInOut" }}
       className="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-lg dark:bg-gray-900/80"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,7 +82,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.2 }} // Slightly faster menu animation
+            transition={{ duration: 0.2 }} 
             className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-b-2xl shadow-lg"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">

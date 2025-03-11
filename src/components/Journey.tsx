@@ -50,11 +50,9 @@ const Journey = () => {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
 
   const handleBoxClick = (index: number) => {
-    // If the clicked box is already expanded, collapse it
     if (hoverIndex === index) {
       setHoverIndex(null);
     } else {
-      // Otherwise, expand the clicked box
       setHoverIndex(index);
     }
   };
@@ -104,9 +102,9 @@ const Journey = () => {
               <motion.div
                 key={index}
                 className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all cursor-pointer w-full max-w-lg mx-auto"
-                onClick={() => handleBoxClick(index)} // Handle click to expand/collapse
-                onMouseEnter={() => setHoverIndex(index)} // Handle hover to expand
-                onMouseLeave={() => setHoverIndex(null)} // Handle hover to collapse
+                onClick={() => handleBoxClick(index)}
+                onMouseEnter={() => setHoverIndex(index)}
+                onMouseLeave={() => setHoverIndex(null)} 
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-16 h-16 rounded-full overflow-hidden shadow-lg flex-shrink-0 sticky top-0">
@@ -146,7 +144,7 @@ const Journey = () => {
                         WebkitLineClamp: hoverIndex === index ? "unset" : 3,
                         WebkitBoxOrient: "vertical",
                         overflow: "hidden",
-                        transition: "all 0.3s ease-in-out",
+                        transition: "all 1s ease-in-out",
                       }}
                     >
                       {item.fullDescription}

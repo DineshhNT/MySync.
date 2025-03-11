@@ -14,7 +14,7 @@ const Footer = () => {
         <img src={Images.Dlogo}  alt="Logo" className="h-12 sm:h-16 md:h-20" />
       </div>
 
-      <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mt-2">
+      <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mt-4">
         Dinesh N T
       </h2>
 

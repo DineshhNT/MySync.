@@ -44,7 +44,6 @@ const SkillBox: React.FC<SkillBoxProps> = ({ title, subSkills }) => {
         <h3 className="text-lg sm:text-xl md:text-2xl font-semibold dark:text-white text-center">{title}</h3>
       </div>
 
-      {/* Skills Grid Container */}
       <div className="flex justify-center w-full">
         <div className="grid w-full
           grid-cols-2

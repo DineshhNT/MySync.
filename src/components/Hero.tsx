@@ -115,8 +115,6 @@ const Hero = () => {
               Download CV
             </motion.a>
           </motion.div>
-
-          {/* Profile Image Section - Adjusted padding for better mobile responsiveness */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}

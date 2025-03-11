@@ -37,7 +37,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const closeModal = () => setIsModalOpen(false);
 
   const handleModalClick = (e: React.MouseEvent) => {
-    e.stopPropagation(); // Prevent event propagation
+    e.stopPropagation(); 
+  };
+
+  const handleIconClick = (e: React.MouseEvent) => {
+    e.stopPropagation(); 
   };
 
   return (
@@ -50,14 +54,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         onClick={openModal}
       >
         <div>
-          {/* Image Section with Inside Box and Black Border */}
           <div className="border-2  border-grey rounded-lg overflow-hidden m-3 ">
             <div className="relative h-[140px] sm:h-[160px] md:h-[180px]">
               <img src={image} alt={title} className="w-full h-full object-cover" />
             </div>
           </div>
 
-          {/* Technical Tags Below Image */}
           <div className="p-2 sm:p-3 md:p-4 flex flex-wrap gap-2 sm:gap-3">
             {technologies.map((tech) => (
               <span
@@ -78,7 +80,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         </div>
 
-        {/* Icons at the Bottom */}
         <div className="p-2 sm:p-3 md:p-4 flex justify-center space-x-4">
           <motion.a
             whileHover={{ scale: 1.1 }}
@@ -87,6 +88,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+            onClick={handleIconClick} 
           >
             <Github size={20} className="sm:w-[25px] sm:h-[25px]" />
           </motion.a>
@@ -97,17 +99,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+            onClick={handleIconClick} 
           >
             <Heart size={20} className="sm:w-[25px] sm:h-[25px]" />
           </motion.a>
         </div>
       </motion.div>
 
-      {/* Modal */}
       {isModalOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 flex items-start justify-center z-50 p-2 sm:p-3 md:p-4 pt-10 sm:pt-15 md:pt-20"
-          onClick={closeModal} // Close modal when clicking outside
+          onClick={closeModal} 
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -115,15 +117,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.1 }}
             className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden w-[90%] sm:w-[85%] md:w-[80%] max-w-xl mx-auto relative flex flex-col"
-            onClick={handleModalClick} // Stop propagation when clicking inside modal
+            onClick={handleModalClick} 
           >
-            {/* Scrollable Content */}
             <div className="overflow-y-auto max-h-[70vh] sm:max-h-[75vh] md:max-h-[80vh] p-3 sm:p-4 md:p-5 scrollbar-thin scrollbar-thumb-gray-400 dark:scrollbar-thumb-gray-600 scrollbar-track-gray-100 dark:scrollbar-track-gray-800">
-              {/* Inside Box for Project Image with Black Border */}
               <div className="border-2 border-grey rounded-lg overflow-hidden">
                 <div className="relative h-[180px] sm:h-[200px] md:h-[300px]">
                   <img src={image} alt={title} className="w-full h-full object-fill" />
-                  {/* Tags in Modal */}
                   <div className="absolute top-2 sm:top-3 right-2 sm:right-3 flex gap-2 sm:gap-3">
                     {tags.map((tag) => (
                       <span
@@ -152,12 +151,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     </span>
                   ))}
                 </div>
-
-                {/* Team Section - Always shown with your image */}
                 <div className="mt-4 sm:mt-5 md:mt-6">
                   <h4 className="text-sm sm:text-md font-semibold mb-2 sm:mb-3 dark:text-white">Team</h4>
                   <div className="flex flex-wrap gap-3 sm:gap-4">
-                    {/* Your Image - Always shown */}
                     <div className="flex flex-col items-center">
                       <img
                         src={Images.Heroimage}
@@ -166,8 +162,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                       />
                       <span className="text-xs sm:text-sm text-gray-700 dark:text-gray-300">Dinesh N T</span>
                     </div>
-
-                    {/* Additional team members - Only shown for group projects */}
                     {showTeam && teamMembers.map((member, index) => (
                       <div key={index} className="flex flex-col items-center">
                         <img
@@ -182,8 +176,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 </div>
               </div>
             </div>
-
-            {/* Fixed Links at Bottom */}
             <div className="p-3 sm:p-4 md:p-5 flex justify-center space-x-3 sm:space-x-4 border-t border-gray-200 dark:border-gray-700">
               <motion.a
                 href={githubUrl}
