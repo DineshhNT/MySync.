@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Github, InstagramIcon, Linkedin, FileIcon } from "lucide-react";
 import { useState, useEffect } from "react";
+import ProfilePic from '../../images/myimage1.jpg'
 
 const Hero = () => {
   const cvFilePath = "/assests/DINESH N T CV.pdf";
@@ -126,7 +127,7 @@ const Hero = () => {
           >
             <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-[24rem] lg:h-[24rem] mx-auto">
               <img
-                src="/images/myimage1.jpg"
+                src=""
                 alt="Profile"
                 className="rounded-full object-cover w-full h-full shadow-2xl ring-4 ring-primary-500/50"
               />
