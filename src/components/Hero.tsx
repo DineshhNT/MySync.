@@ -123,7 +123,7 @@ const Hero = () => {
               <img
                 src={Images.Heroimage}
                 alt="Profile"
-                className="rounded-full object-cover w-full h-full shadow-2xl ring-4 ring-primary-500/50"
+                className="rounded-full object-cover w-full h-full shadow-2xl  ring-primary-500/50"
               />
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary-500/20 to-secondary-500/20"></div>
             </div>

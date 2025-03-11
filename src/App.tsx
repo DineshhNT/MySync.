@@ -101,7 +101,7 @@ function App() {
     },
     {
       title: 'My Sync.',
-      description: 'responsive portfolio is a dynamic and visually engaging web application built with React, Vite, Tailwind CSS, and TypeScript to showcase my skills, projects, and professional journey. Designed with a clean and modern UI, it offers a fully responsive experience across all devices, smooth animations, and interactive elements. Leveraging Vite for fast performance and TypeScript for type safety, this portfolio highlights my expertise in creating efficient, scalable, and visually appealing web applications.',
+      description: 'Responsive portfolio is a dynamic and visually engaging web application built with React, Vite, Tailwind CSS, and TypeScript to showcase my skills, projects, and professional journey. Designed with a clean and modern UI, it offers a fully responsive experience across all devices, smooth animations, and interactive elements. Leveraging Vite for fast performance and TypeScript for type safety, this portfolio highlights my expertise in creating efficient, scalable, and visually appealing web applications.',
       image: Images.ProjectThumbs.MySync,
       technologies: ['React', 'Vite', 'Tailwind CSS', 'TypeScript'],
       tags: ['React', 'Portfolio'],

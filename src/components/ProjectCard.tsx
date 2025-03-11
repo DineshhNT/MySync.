@@ -156,7 +156,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   <div className="flex flex-wrap gap-3 sm:gap-4">
                     <div className="flex flex-col items-center">
                       <img
-                        src={Images.Heroimage}
+                        src={Images.Teammembers.Hero_image}
                         alt="myimage1"
                         className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full object-cover mb-1 sm:mb-2"
                       />

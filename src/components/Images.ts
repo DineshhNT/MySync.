@@ -1,4 +1,4 @@
-import Heroimage from "../../images/My/Hero_image.jpg";
+import Heroimage from "../../images/My/Heroimage.png";
 
 import cv from "../../assests/DINESH N T CV.pdf";
 
@@ -41,7 +41,7 @@ import Mushroom_Classifier from "../../images/ProjectThumb/Mushroom Classifier.j
 import SentimentX from "../../images/ProjectThumb/Sentiment X.jpg";
 import ED from "../../images/ProjectThumb/E&D.jpg";
 
-
+import Hero_image from "../../images/My/Hero_image.jpg"
 import member2 from "../../images/Teammembers/Deena.jpeg";
 
 import Dlogo from "../../images/My/D_logo.png";
@@ -87,7 +87,7 @@ const Images: ImagesType = {
     ED,
   },
 
-  Teammembers: {member2},
+  Teammembers: { Hero_image, member2},
 
   Dlogo,
 };
