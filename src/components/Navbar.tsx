@@ -12,16 +12,13 @@ const Navbar = () => {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > prevScrollY && currentScrollY > 50) {
-        // Hide on fast downward scroll
         setIsVisible(false);
       } else {
-        // Show on upward scroll
         setIsVisible(true);
       }
 
       setPrevScrollY(currentScrollY);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollY]);
@@ -49,8 +46,6 @@ const Navbar = () => {
           >
             My Sync.
           </motion.div>
-
-          {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-4 lg:space-x-8">
             {navItems.map((item) => (
               <motion.button
@@ -64,8 +59,6 @@ const Navbar = () => {
               </motion.button>
             ))}
           </div>
-
-          {/* Mobile Navigation Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -75,8 +68,6 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-
-        {/* Mobile Navigation Menu */}
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -103,5 +94,4 @@ const Navbar = () => {
     </motion.nav>
   );
 };
-
 export default Navbar;

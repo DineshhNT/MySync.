@@ -57,17 +57,17 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-900 dark:to-gray-800"
+      className="relative min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-900 dark:to-gray-800 pt-16 sm:pt-20 lg:pt-24" // Added padding-top to prevent navbar overlap
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-20 w-full">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-20">
-          
-          {/* Social Media Icons */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex lg:flex-col justify-center lg:justify-start items-center space-y-0 space-x-4 lg:space-x-0 lg:space-y-4 w-full lg:w-auto mt-8 lg:mt-0 lg:pl-5 lg:pt-5"
+            className="flex lg:flex-col justify-center lg:justify-start items-center 
+              space-y-0 space-x-4 lg:space-x-0 lg:space-y-4 
+              w-full lg:w-auto mt-6 lg:mt-0 lg:pl-5"
           >
             <motion.a
               whileHover={{ scale: 1.1 }}
@@ -75,9 +75,9 @@ const Hero = () => {
               href="https://github.com/DineshhNT"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-gray-900 text-white hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600"
+              className="p-2.5 sm:p-3 rounded-full bg-gray-900 text-white hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600"
             >
-              <Github size={24} />
+              <Github className="w-5 h-5 sm:w-6 sm:h-6" />
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.1 }}
@@ -85,26 +85,24 @@ const Hero = () => {
               href="https://www.linkedin.com/in/dinesh-nt-20b0b6256/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-blue-600 text-white hover:bg-blue-700"
+              className="p-2.5 sm:p-3 rounded-full bg-blue-600 text-white hover:bg-blue-700"
             >
-              <Linkedin size={24} />
+              <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               href="https://www.instagram.com/d_i_n_e_s_h_h_/"
-              className="p-3 rounded-full bg-red-600 text-white hover:bg-red-700"
+              className="p-2.5 sm:p-3 rounded-full bg-red-600 text-white hover:bg-red-700"
             >
-              <InstagramIcon size={24} />
+              <InstagramIcon className="w-5 h-5 sm:w-6 sm:h-6" />
             </motion.a>
           </motion.div>
-
-          {/* Hero Text Section */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-center lg:text-left w-full lg:w-1/2 space-y-4 md:space-y-6 mt-8 lg:mt-0"
+            className="text-center lg:text-left w-full lg:w-1/2 space-y-4 md:space-y-6"
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white">
               Hi, I'm
@@ -112,20 +110,18 @@ const Hero = () => {
                 Dinesh N T
               </span>
             </h1>
-
-            {/* Typing Animation */}
             <p className="text-lg sm:text-xl md:text-2xl font-medium text-gray-900 dark:text-white">
               <span className="dark:text-white text-black">I am a </span>
-              <span className="font-bold text-1xl sm:text-2xl md:text-3xl transition-all duration-500 dark:text-white text-black">
+              <span className="font-bold text-xl sm:text-2xl md:text-3xl transition-all duration-500 dark:text-white text-black">
                 {text}
               </span>
-              <span className="font-bold text-3xl md:text-4xl dark:text-white text-black animate-pulse">&nbsp;|</span>
+              <span className="font-bold text-2xl sm:text-3xl md:text-4xl dark:text-white text-black animate-pulse">&nbsp;|</span>
             </p>
 
-            <p className="text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 leading-relaxed px-4 lg:px-0">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 leading-relaxed px-4 lg:px-0">
               Passionate Python Developer with expertise in AI, ML, Deep Learning, and Full-Stack Development, blending intelligence with intuitive design.
               Currently pursuing B.Tech in AI & Data Science at Kathir College of Engineering, I thrive on building impactful AI solutions and cutting-edge applications. 
-              Driven by innovation, I craft technology that shapes the future.  🫧
+              Driven by innovation, I craft technology that shapes the future. 🫧
             </p>
 
             <motion.a
@@ -133,22 +129,19 @@ const Hero = () => {
               download="DINESH N T CV.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center text-white px-6 py-4 md:py-5 rounded-2xl text-base md:text-lg font-semibold shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-primary-600 to-secondary-600"
+              className="inline-flex items-center text-white px-4 sm:px-6 py-3 sm:py-4 md:py-5 rounded-2xl text-sm sm:text-base md:text-lg font-semibold shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-primary-600 to-secondary-600"
             >
-              <FileIcon className="w-5 h-5 mr-2" />
+              <FileIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Download CV
             </motion.a>
           </motion.div>
-
-          {/* Hero Image Section with New Animation */}
           <motion.div
             initial="hidden"
             animate="visible"
             variants={imageAnimation}
-            className="relative w-full sm:w-2/3 md:w-1/2 lg:w-1/3 px-4 lg:px-0 lg:-ml-6 lg:pr-20"
+            className="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[420px] mx-auto lg:mx-0"
           >
-            <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-[24rem] lg:h-[24rem] mx-auto">
-              {/* Rotating border animation */}
+            <div className="relative aspect-square">
               <motion.div
                 variants={rotatingBorderAnimation}
                 animate="animate"
@@ -156,8 +149,6 @@ const Hero = () => {
               >
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary-500/30 to-secondary-500/30 backdrop-blur-sm"></div>
               </motion.div>
-              
-              {/* Image container */}
               <div className="absolute inset-[4px] rounded-full overflow-hidden">
                 <img
                   src={Images.Heroimage}

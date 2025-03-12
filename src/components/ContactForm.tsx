@@ -19,8 +19,6 @@ const ContactForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
-    // Replace with your EmailJS credentials
     const serviceID = 'Your_serviceID';
     const templateID = 'Your_templateID';
     const publicKey = 'Your_publicKey';
@@ -99,5 +97,4 @@ const ContactForm = () => {
     </form>
   );
 };
-
 export default ContactForm;
