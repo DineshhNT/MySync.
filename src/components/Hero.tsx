@@ -59,8 +59,8 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-900 dark:to-gray-800 pt-16 sm:pt-20 lg:pt-24" // Added padding-top to prevent navbar overlap
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-20 w-full">
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 w-full">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-10">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
