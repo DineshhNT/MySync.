@@ -42,8 +42,8 @@ function App() {
         { name: 'CSS', icon: Images.FrontEnd.CSS },
         { name: 'JavaScript', icon: Images.FrontEnd.JS },
         { name: 'React', icon: Images.FrontEnd.React },
+        { name: 'Vite', icon: Images.FrontEnd.Vite},
         { name: 'Tailwind', icon: Images.FrontEnd.Tailwind },
-        { name: 'Bootstrap', icon: Images.FrontEnd.Bootstrap},
       ]
     },
     {
@@ -67,6 +67,7 @@ function App() {
         { name: 'Pandas', icon: Images.AIML.Pandas },
         { name: 'Numpy', icon: Images.AIML.Numpy},
         { name: 'Algorithms', icon: Images.AIML.Algorithms},
+        { name: 'Scikitlearn', icon: Images.AIML.Scikitlearn},
       ]
     },
     {
@@ -78,6 +79,7 @@ function App() {
         { name: 'VS Code', icon: Images.Others.VSCode },
         { name: 'Photoshop', icon: Images.Others.Photoshop},
         { name: 'Figma', icon: Images.Others.Figma},
+        { name: 'Git', icon: Images.Others.Git}
       ]
     }
   ];
