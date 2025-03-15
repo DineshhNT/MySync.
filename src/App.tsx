@@ -35,7 +35,7 @@ function App() {
 
   const skills = [
     {
-      icon: <Code size={25} />,
+      icon: <Code size={26} />,
       title: 'Front-End',
       subSkills: [
         { name: 'HTML', icon: Images.FrontEnd.HTML },
@@ -47,7 +47,7 @@ function App() {
       ]
     },
     {
-      icon: <Database size={24} />,
+      icon: <Database size={26} />,
       title: 'Back-End',
       subSkills: [
         { name: 'Python', icon: Images.BackEnd.Python },
@@ -59,7 +59,7 @@ function App() {
       ]
     },
     {
-      icon: <Brain size={25} />,
+      icon: <Brain size={26} />,
       title: 'AI/ML',
       subSkills: [
         { name: 'TensorFlow', icon: Images.AIML.TensorFlow },
@@ -71,7 +71,7 @@ function App() {
       ]
     },
     {
-      icon: <Palette size={25} />,
+      icon: <Palette size={26} />,
       title: 'Other Skills',
       subSkills: [
         { name: 'GitHub', icon: Images.Others.GitHub },
@@ -99,6 +99,7 @@ function App() {
           name: 'Deenathayalan C K',
           image: Images.Teammembers.member2
         },
+        
       ]
     },
     {
@@ -119,13 +120,7 @@ function App() {
       tags: ['Glaucoma Detection', 'Deep Learning'],
       githubUrl: 'https://github.com/DineshhNT/Glaucoma-Disease-Detection-using-CNN',
       liveUrl: 'https://github.com/DineshhNT',
-      showTeam: false,
-      teamMembers: [
-        {
-          name: 'Deenathayalan C K',
-          image: Images.Teammembers.member2
-        }
-      ]
+      showTeam: false
     },
     {
       title: 'Mushroom Classifier',
@@ -150,7 +145,8 @@ function App() {
         {
           name: 'Deenathayalan C K',
           image: Images.Teammembers.member2
-        }
+        },
+        
       ]
     },
     {
@@ -161,7 +157,7 @@ function App() {
       tags: ['AI', 'Data Transformation'],
       githubUrl: 'https://github.com/DineshhNT',
       liveUrl: 'https://github.com/DineshhNT',
-      showTeam: true,
+      showTeam: false
     }
   ];
 

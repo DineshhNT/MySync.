@@ -75,7 +75,7 @@ const Journey = () => {
             onClick={() => setActiveTab("education")}
             className={`px-6 py-2 rounded-full font-medium transition-all ${
               activeTab === "education"
-                ? "bg-blue-600 text-white shadow-xl"
+                ? "bg-blue-600 text-white shadow-xl "
                 : "bg-white text-gray-600 hover:bg-gray-100 shadow-md"
             }`}
           >
