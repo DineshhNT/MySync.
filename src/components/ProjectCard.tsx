@@ -196,7 +196,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   href={githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-600 dark:bg-blue-600 rounded-lg text-[12px] sm:text-sm text-gray-100 dark:text-gray-100 hover:bg-blue-700 dark:hover:bg-blue-700 transition-colors w-full sm:w-auto"
+                  className="flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-600 dark:bg-blue-600 rounded-lg text-[12px] sm:text-sm text-gray-100 dark:text-gray-100 hover:bg-blue-700 dark:hover:bg-blue-700 transition-colors  sm:w-auto"
                 >
                   <Github size={16} className="sm:w-5 sm:h-5" />
                   <span>View Code</span>
@@ -207,7 +207,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   href={liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-600 dark:bg-blue-600 rounded-lg text-[12px] sm:text-sm text-gray-100 dark:text-gray-100 hover:bg-blue-700 dark:hover:bg-blue-700 transition-colors w-full sm:w-auto"
+                  className="flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-600 dark:bg-blue-600 rounded-lg text-[12px] sm:text-sm text-gray-100 dark:text-gray-100 hover:bg-blue-700 dark:hover:bg-blue-700 transition-colors  sm:w-auto"
                 >
                   <ExternalLink size={16} className="sm:w-5 sm:h-5" />
                   <span>Live Demo</span>

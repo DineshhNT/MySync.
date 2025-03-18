@@ -8,9 +8,9 @@ const Hero = () => {
   const [roleIndex, setRoleIndex] = useState(0);
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const typingSpeed = 120; 
+  const typingSpeed = 120;
   const deletingSpeed = 70;
-  const delayBetweenWords = 1300; 
+  const delayBetweenWords = 1300;
 
   useEffect(() => {
     let timeout = 0;
@@ -57,7 +57,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-900 dark:to-gray-800 pt-12 sm:pt-16 lg:pt-20" // Reduced padding-top values
+      className="relative min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-900 dark:to-gray-800 pt-12 sm:pt-16 lg:pt-20 overflow-hidden" // ✅ Fix added here
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 w-full">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-10">
@@ -112,7 +112,7 @@ const Hero = () => {
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl font-medium text-gray-900 dark:text-white">
               <span className="dark:text-white text-black">I am a </span>
-              <span className="font-bold text-xl sm:text-2xl md:text-3xl transition-all duration-500 dark:text-white text-black">
+              <span className="font-bold text-xl sm:text-2xl md:text-3xl transition-all duration-500 dark:text-white text-black whitespace-nowrap">
                 {text}
               </span>
               <span className="font-bold text-2xl sm:text-3xl md:text-4xl dark:text-white text-black animate-pulse">&nbsp;|</span>
@@ -146,9 +146,7 @@ const Hero = () => {
                 variants={rotatingBorderAnimation}
                 animate="animate"
                 className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 p-1"
-              >
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary-500/30 to-secondary-500/30 backdrop-blur-sm"></div>
-              </motion.div>
+              />
               <div className="absolute inset-[4px] rounded-full overflow-hidden">
                 <img
                   src={Images.Heroimage}
