@@ -85,10 +85,10 @@ function Home() {
   const projects = [
     {
       title: 'AI Med-Assist',
-      description: 'AI-Med Assist is an AI-powered platform that provides personalized medical guidance and symptom analysis using NLP and Machine Learning.',
+      description: 'Personalized AI-Med Assist is an intelligent healthcare companion designed to offer tailored medical support.It uses NLP to analyze symptoms and deliver accurate, real-time health recommendations.Integrated with ML models and IoT devices, it aids in early diagnosis and chronic disease management.The system ensures secure, patient-centric care through a user-friendly web interface.',
       image: Images.ProjectThumbs.AI_Med_Assist,
-      technologies: ['Python', 'HTML', 'CSS', 'JavaScript', 'Flask', 'IoT'],
-      tags: ['Full-Stack', 'AI Med Bot'],
+      technologies: ['MongoDB', 'Express', 'React', 'Node', 'Python','IoT'],
+      tags: ['Mern-Stack', 'AI Med Bot'],
       githubUrl: 'https://github.com',
       liveUrl: 'https://example.com',
       showTeam: true,
@@ -100,10 +100,10 @@ function Home() {
       ]
     },
     {
-      title: 'Gemini',
-      description: 'The Gemini App Clone is an AI-powered chatbot designed to provide intelligent and contextual responses using NLP and deep learning.',
-      image: Images.ProjectThumbs.MySync,
-      technologies: ['React', 'Vite', 'Tailwind CSS', 'Java Script'],
+      title: 'Gemini GPT',
+      description: 'The GeminiGPT is an AI-powered chatbot web app built with React.It mimics Gemini with real-time responses, sleek UI, and smart context handling.Powered by NLP and integrated APIs, it delivers intelligent conversations across topics.The clone offers chat history, and responsive design for seamless user experience',
+      image: Images.ProjectThumbs.GeminiGPT,
+      technologies: ['React', 'Vite', 'Java Script', 'Tailwind CSS'],
       tags: ['React', 'App Clone'],
       githubUrl: 'https://github.com/DineshhNT/MySync.',
       liveUrl: 'https://dineshhnt.github.io/MySync./',
@@ -111,7 +111,7 @@ function Home() {
     },
     {
       title: 'My Sync',
-      description: 'Responsive portfolio is a dynamic and visually engaging web application built with React, Vite, Tailwind CSS, and TypeScript.',
+      description: 'MySync is a fully responsive personal portfolio built using React, Vite, and Tailwind CSS.It showcases projects, skills, and experience in a clean, modern interface.With smooth animations and a mobile-friendly design, it ensures seamless navigation.MySync highlights professional growth and creativity with a focus on performance.',
       image: Images.ProjectThumbs.MySync,
       technologies: ['React', 'Vite', 'Tailwind CSS', 'TypeScript'],
       tags: ['React', 'Portfolio'],
@@ -121,9 +121,9 @@ function Home() {
     },
     {
       title: 'Deep Sight',
-      description: 'Glaucoma Detection Using CNN is an AI system that identifies glaucoma from retinal images using Convolutional Neural Networks.',
+      description: 'This project uses Convolutional Neural Networks (CNN) to detect glaucoma from retinal images.It automates early diagnosis by analyzing visual patterns linked to glaucoma.Trained on labeled eye datasets, the model achieves high detection accuracy.Built with Python, TensorFlow, and OpenCV, it assists in preventing vision loss.',
       image: Images.ProjectThumbs.DeepSight,
-      technologies: ['CNN', 'Python', 'TensorFlow', 'Machine Learning', 'Deep Learning'],
+      technologies: ['CNN', 'Python', 'TensorFlow',  'Deep Learning'],
       tags: ['Glaucoma Detection', 'Deep Learning'],
       githubUrl: 'https://github.com/DineshhNT/Glaucoma-Disease-Detection-using-CNN',
       liveUrl: 'https://github.com/DineshhNT',
@@ -131,7 +131,7 @@ function Home() {
     },
     {
       title: 'Mushroom Classifier',
-      description: 'Mushroom Edibility Classifier detects poisonous mushrooms. It uses an SVM model in Python to classify edible and toxic mushrooms.',
+      description: 'This project predicts the edibility of mushrooms using a Support Vector Machine (SVM) model.It classifies mushrooms as edible or poisonous based on various features.Built with Python and Streamlit for an interactive UI experience.It helps users make safe decisions while foraging or identifying mushrooms.The model is trained on a well-labeled dataset, ensuring accurate classification.A user-friendly web interface allows easy input and instant predictions.',
       image: Images.ProjectThumbs.Mushroom_Classifier,
       technologies: ['Python', 'Streamlit', 'Deep Learning', 'Machine Learning'],
       tags: ['Mushroom Classification', 'Deep Learning'],

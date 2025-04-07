@@ -39,9 +39,9 @@ const Projects = () => {
   const projects = [
     {
       title: 'AI Med-Assist',
-      description: 'AI-Med Assist is an AI-powered platform that provides personalized medical guidance...',
+      description: 'Personalized AI-Med Assist is an intelligent healthcare companion designed to offer tailored medical support.It uses NLP to analyze symptoms and deliver accurate, real-time health recommendations.Integrated with ML models and IoT devices, it aids in early diagnosis and chronic disease management.The system ensures secure, patient-centric care through a user-friendly web interface.',
       image: Images.ProjectThumbs.AI_Med_Assist,
-      technologies: ['Python', 'HTML', 'CSS', 'JavaScript', 'Flask', 'IoT'],
+      technologies: ['MongoDB', 'Express', 'React', 'Node', 'Python','IoT'],
       tags: ['Full-Stack', 'AI Med Bot'],
       githubUrl: 'https://github.com',
       liveUrl: 'https://example.com',
@@ -51,10 +51,10 @@ const Projects = () => {
       ]
     },
     {
-      title: 'Gemini',
-      description: 'The Gemini App Clone is an AI-powered chatbot...',
-      image: Images.ProjectThumbs.MySync,
-      technologies: ['React', 'Vite', 'Tailwind CSS', 'Java Script'],
+      title: 'Gemini GPT',
+      description: 'The GeminiGPT is an AI-powered chatbot web app built with React.It mimics Gemini with real-time responses, sleek UI, and smart context handling.Powered by NLP and integrated APIs, it delivers intelligent conversations across topics.The clone offers chat history, and responsive design for seamless user experience',
+      image: Images.ProjectThumbs.GeminiGPT,
+      technologies: ['React', 'Vite', 'Java Script', 'Tailwind CSS','Gemini API'],
       tags: ['React', 'App Clone'],
       githubUrl: 'https://github.com/DineshhNT/MySync.',
       liveUrl: 'https://dineshhnt.github.io/MySync./',
@@ -62,9 +62,9 @@ const Projects = () => {
     },
     {
       title: 'My Sync',
-      description: 'Responsive portfolio is a dynamic and visually engaging web application...',
+      description: 'MySync is a fully responsive personal portfolio built using React, Vite, and Tailwind CSS.It showcases projects, skills, and experience in a clean, modern interface.With smooth animations and a mobile-friendly design, it ensures seamless navigation.MySync highlights professional growth and creativity with a focus on performance.',
       image: Images.ProjectThumbs.MySync,
-      technologies: ['React', 'Vite', 'Tailwind CSS', 'TypeScript'],
+      technologies: ['React', 'Vite', 'Tailwind CSS', 'TypeScript','EmailJS'],
       tags: ['React', 'Portfolio'],
       githubUrl: 'https://github.com/DineshhNT/MySync.',
       liveUrl: 'https://dineshhnt.github.io/MySync./',
@@ -72,7 +72,7 @@ const Projects = () => {
     },
     {
       title: 'Deep Sight',
-      description: 'Glaucoma Detection Using CNN is an AI system that identifies glaucoma Glaucoma Detection Using CNN is an AI system that identifies glaucoma.Glaucoma Detection Using CNN is an AI system that identifies glaucoma.Glaucoma Detection Using CNN is an AI system that identifies glaucoma.',
+      description: 'This project uses Convolutional Neural Networks (CNN) to detect glaucoma from retinal images.It automates early diagnosis by analyzing visual patterns linked to glaucoma.Trained on labeled eye datasets, the model achieves high detection accuracy.Built with Python, TensorFlow, and OpenCV, it assists in preventing vision loss.',
       image: Images.ProjectThumbs.DeepSight,
       technologies: ['CNN', 'Python', 'TensorFlow', 'Machine Learning', 'Deep Learning'],
       tags: ['Glaucoma Detection', 'Deep Learning'],
@@ -82,7 +82,7 @@ const Projects = () => {
     },
     {
       title: 'Mushroom Classifier',
-      description: 'Mushroom Edibility Classifier detects poisonous mushrooms...',
+      description: 'This project predicts the edibility of mushrooms using a Support Vector Machine (SVM) model.It classifies mushrooms as edible or poisonous based on various features.Built with Python and Streamlit for an interactive UI experience.It helps users make safe decisions while foraging or identifying mushrooms.The model is trained on a well-labeled dataset, ensuring accurate classification.A user-friendly web interface allows easy input and instant predictions.',
       image: Images.ProjectThumbs.Mushroom_Classifier,
       technologies: ['Python', 'Streamlit', 'Deep Learning', 'Machine Learning'],
       tags: ['Mushroom Classification', 'Deep Learning'],
@@ -92,9 +92,9 @@ const Projects = () => {
     },
     {
       title: 'Sentiment X',
-      description: 'Sentiment X for E-commerce reviews is an AI-driven system...',
+      description: 'This project analyzes customer reviews from Flipkart and Amazon to determine sentiment polarity.It classifies reviews as positive, negative, or neutral using NLP techniques.Python libraries like NLTK and Scikit-learn were used for preprocessing and modeling.The insights help businesses understand user satisfaction and improve strategies.Visualizations like word clouds and sentiment charts enhance interpretability.',
       image: Images.ProjectThumbs.SentimentX,
-      technologies: ['Python', 'NLP', 'Word Cloud', 'Machine Learning'],
+      technologies: ['Python', 'NLP', 'Word Cloud','TensorFlow', 'Machine Learning'],
       tags: ['E-Commerce Reviews', 'Machine Learning'],
       githubUrl: 'https://github.com/DineshhNT/SENTIMENTAL-ANALYSIS-USING-PYTHON',
       liveUrl: 'https://github.com/DineshhNT',
@@ -105,7 +105,7 @@ const Projects = () => {
     },
     {
       title: 'Code Flux',
-      description: 'Code Flux using Python is a system that converts data into encoded or decoded formats...',
+      description: 'This project implements an Encoder-Decoder architecture using Python for sequence-to-sequence tasks.It is designed to handle transformations like language translation or number-to-word conversion.The encoder processes the input sequence into a fixed representation.The decoder then generates an output sequence based on that representation.Built using TensorFlow/Keras, it showcases the fundamentals of sequence modeling in AI.',
       image: Images.ProjectThumbs.ED,
       technologies: ['Python', 'Encoder', 'Decoder', 'AI', 'Transformation'],
       tags: ['AI', 'Data Transformation'],

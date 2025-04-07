@@ -37,6 +37,7 @@ import Izet from "../../images/Institutionlogo/izet_logo.jpeg";
 import Internpe from "../../images/Institutionlogo/internpe_logo.jpeg";
 
 import AI_Med_Assist from "../../images/ProjectThumb/AI-Med Assist.jpg";
+import GeminiGPT from "../../images/ProjectThumb/GeminiGPT.png";
 import MySync from "../../images/ProjectThumb/My Sync.jpg";
 import DeepSight from "../../images/ProjectThumb/Deep sight.jpg";
 import Mushroom_Classifier from "../../images/ProjectThumb/Mushroom Classifier.jpg";
@@ -85,6 +86,7 @@ const Images: ImagesType = {
 
   ProjectThumbs: {
     AI_Med_Assist,
+    GeminiGPT,
     MySync,
     DeepSight,
     Mushroom_Classifier,
