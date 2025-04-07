@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const ProjectNavbar = () => {
+  const navigate = useNavigate();
   const [prevScrollY, setPrevScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
@@ -19,12 +22,6 @@ const ProjectNavbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollY]);
 
-  const goToProjectsSection = () => {
-    localStorage.setItem("scrollToProjects", "true");
-    window.location.href = "/";
-
-  };
-
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -39,22 +36,13 @@ const ProjectNavbar = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-4 py-1.5 rounded-full border border-gray-400 dark:border-gray-300  font-bold text-sm sm:text-base text-gray-700 dark:text-white hover:text-[#1c64f2] dark:hover:text-[#4ca6ff] transition-colors"
-            onClick={goToProjectsSection}
+            onClick={()=> navigate(-1)}
           >
             Back
           </motion.button>
-
-          <div className="flex-1" />
-
-          {/* Projects Button */}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="mr-4 sm:mr-8 text-sm sm:text-base font-medium text-gray-700 dark:text-white hover:text-[#1c64f2] dark:hover:text-[#4ca6ff] transition-colors px-10"
-            onClick={goToProjectsSection}
-          >
-            Projects
-          </motion.button>
+          <div className="flex justify-center">
+            Projects Page
+          </div>
         </div>
       </div>
     </motion.nav>

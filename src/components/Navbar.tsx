@@ -44,7 +44,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent"
           >
-            My Sync.
+            My Sync
           </motion.div>
           <div className="hidden md:flex space-x-4 lg:space-x-8">
             {navItems.map((item) => (

@@ -122,8 +122,8 @@ const Projects = () => {
       {/* Project Cards */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-center mb-12 dark:text-white">
-            Projects Page
+          <h1 className="text-2xl font-bold text-center mb-12 dark:text-white">
+            These are the projects that I have worked on.
           </h1>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
