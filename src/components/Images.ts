@@ -49,7 +49,7 @@ import Hero_image from "../../images/My/Hero_image.jpg";
 import member2 from "../../images/Teammembers/Deena.jpeg";
 import member3 from "../../images/Teammembers/Priyanka.jpg";
 
-import Dlogo from "../../public/D_logo.png";
+import Dlogo from "../../public/Dlogo.png";
 
 interface ImageCategory {
   [key: string]: string;
