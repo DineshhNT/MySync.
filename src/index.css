@@ -1,3 +1,108 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --gradient-background-start: rgb(108, 0, 162);
+    --gradient-background-end: rgb(0, 17, 82);
+    --first-color: 18, 113, 255;
+    --second-color: 221, 74, 255;
+    --third-color: 100, 220, 255;
+    --fourth-color: 200, 50, 50;
+    --fifth-color: 180, 180, 50;
+    --pointer-color: 140, 100, 255;
+    --size: 80%;
+    --blending-value: hard-light;
+  }
+  
+  .gradients-container div {
+    position: absolute;
+    mix-blend-mode: var(--blending-value);
+    width: var(--size);
+    height: var(--size);
+    top: calc(50% - var(--size) / 2);
+    left: calc(50% - var(--size) / 2);
+    transform-origin: center center;
+    opacity: 100%;
+  }
+  
+  @keyframes animate-first {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes animate-second {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes animate-third {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.4);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes animate-fourth {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes animate-fifth {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .animate-first {
+    animation: animate-first 6s infinite alternate;
+  }
+  
+  .animate-second {
+    animation: animate-second 7s infinite alternate;
+  }
+  
+  .animate-third {
+    animation: animate-third 8s infinite alternate;
+  }
+  
+  .animate-fourth {
+    animation: animate-fourth 9s infinite alternate;
+  }
+  
+  .animate-fifth {
+    animation: animate-fifth 10s infinite alternate;
+  }
+  
