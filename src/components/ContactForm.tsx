@@ -19,9 +19,9 @@ const ContactForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const serviceID = 'Your_serviceID';
-    const templateID = 'Your_templateID';
-    const publicKey = 'Your_publicKey';
+    const serviceID = import.meta.env.VITE_SERVICEID;
+    const templateID = import.meta.env.VITE_TEMPLATEID;
+    const publicKey = import.meta.env.VITE_PUBLICKEY;
 
     const templateParams = {
       from_name: formData.name,
