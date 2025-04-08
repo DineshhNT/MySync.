@@ -153,7 +153,9 @@ function Home() {
       {/* Skills Section */}
       <section id="skills" className="py-20 bg-white dark:bg-gray-800 transition-colors duration-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12 dark:text-white">Skills</h2>
+          <h2 className="text-4xl font-bold text-center mb-5 dark:text-white">Skills</h2>
+          <h2 className="text-2xl font-bold text-center mb-6 text-gray-400 dark:text-white">Here’s a glimpse of the skills I’ve been honing!</h2>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-12">
             {skills.map((skill, index) => (
               <SkillBox key={index} {...skill} />
@@ -167,7 +169,8 @@ function Home() {
       {/* Projects Section */}
       <section id="projects" className="py-20 dark:bg-gray-900 transition-colors duration-200">
         <div className="mx-auto px-4 sm:px-6 max-w-[1000px]">
-          <h2 className="text-4xl font-bold text-center mb-12 dark:text-white">Projects</h2>
+          <h2 className="text-4xl font-bold text-center mb-5 dark:text-white">Projects</h2>
+          <h2 className="text-2xl font-bold text-center mb-6 text-gray-400 dark:text-white">I've built projects from web apps to AI/ML solutions. Here are a few highlights.</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <ProjectCard key={index} {...project} />
@@ -194,7 +197,9 @@ function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-white dark:bg-gray-800 transition-colors duration-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12 dark:text-white">Get in Touch</h2>
+          <h2 className="text-4xl font-bold text-center mb-5 dark:text-white">Get in Touch</h2>
+          <h2 className="text-2xl font-bold text-center mb-6 text-gray-400 dark:text-white">Open to questions, ideas, or collaboration—let’s connect!</h2>
+
           <ContactForm />
         </div>
       </section>

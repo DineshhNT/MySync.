@@ -63,9 +63,16 @@ const Journey = () => {
         <motion.h2 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-3xl font-bold text-center mb-8 text-black dark:text-white"
+          className="text-4xl font-bold text-center mb-5 text-black dark:text-white"
         >
           Experience & Education
+        </motion.h2>
+        <motion.h2 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-2xl font-bold text-center mb-6  text-gray-400 dark:text-white"
+        >
+          A quick look at my educational background & work experience.
         </motion.h2>
 
         <div className="flex justify-center mb-8 space-x-4">
