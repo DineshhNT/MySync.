@@ -114,7 +114,7 @@ const Journey = () => {
                 onMouseLeave={() => setHoverIndex(null)} 
               >
                 <div className="flex items-start space-x-4">
-                  <div className="w-16 h-16 rounded-full overflow-hidden shadow-lg flex-shrink-0 sticky top-0">
+                  <div className="w-16 h-16 rounded-full overflow-hidden shadow-lg flex-shrink-0  top-0">
                     <img 
                       src={item.logo} 
                       alt={item.title} 

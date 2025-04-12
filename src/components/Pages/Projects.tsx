@@ -22,6 +22,8 @@ const Projects = () => {
     return false;
   });
 
+  const [selectedFilter, setSelectedFilter] = useState('All');
+
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add('dark');
@@ -41,20 +43,18 @@ const Projects = () => {
       title: 'AI Med-Assist',
       description: 'Personalized AI-Med Assist is an intelligent healthcare companion designed to offer tailored medical support.It uses NLP to analyze symptoms and deliver accurate, real-time health recommendations.Integrated with ML models and IoT devices, it aids in early diagnosis and chronic disease management.The system ensures secure, patient-centric care through a user-friendly web interface.',
       image: Images.ProjectThumbs.AI_Med_Assist,
-      technologies: ['MongoDB', 'Express', 'React', 'Node', 'Python','IoT'],
+      technologies: ['MongoDB', 'Express', 'React', 'Node', 'Python', 'IoT'],
       tags: ['Full-Stack', 'AI Med Bot'],
       githubUrl: 'https://github.com',
       liveUrl: 'https://example.com',
       showTeam: true,
-      teamMembers: [
-        { name: 'Deenathayalan C K', image: Images.Teammembers.member2 }
-      ]
+      teamMembers: [{ name: 'Deenathayalan C K', image: Images.Teammembers.member2 }]
     },
     {
       title: 'Gemini GPT',
       description: 'The GeminiGPT is an AI-powered chatbot web app built with React.It mimics Gemini with real-time responses, sleek UI, and smart context handling.Powered by NLP and integrated APIs, it delivers intelligent conversations across topics.The clone offers chat history, and responsive design for seamless user experience',
       image: Images.ProjectThumbs.GeminiGPT,
-      technologies: ['React', 'Vite', 'Java Script', 'Tailwind CSS','Gemini API'],
+      technologies: ['React', 'Vite', 'Java Script', 'Tailwind CSS', 'Gemini API'],
       tags: ['React', 'App Clone'],
       githubUrl: 'https://github.com/DineshhNT/MySync.',
       liveUrl: 'https://dineshhnt.github.io/MySync./',
@@ -64,7 +64,7 @@ const Projects = () => {
       title: 'My Sync',
       description: 'MySync is a fully responsive personal portfolio built using React, Vite, and Tailwind CSS.It showcases projects, skills, and experience in a clean, modern interface.With smooth animations and a mobile-friendly design, it ensures seamless navigation.MySync highlights professional growth and creativity with a focus on performance.',
       image: Images.ProjectThumbs.MySync,
-      technologies: ['React', 'Vite', 'Tailwind CSS', 'TypeScript','EmailJS'],
+      technologies: ['React', 'Vite', 'Tailwind CSS', 'TypeScript', 'EmailJS'],
       tags: ['React', 'Portfolio'],
       githubUrl: 'https://github.com/DineshhNT/MySync.',
       liveUrl: 'https://dineshhnt.github.io/MySync./',
@@ -94,14 +94,12 @@ const Projects = () => {
       title: 'Sentiment X',
       description: 'This project analyzes customer reviews from Flipkart and Amazon to determine sentiment polarity.It classifies reviews as positive, negative, or neutral using NLP techniques.Python libraries like NLTK and Scikit-learn were used for preprocessing and modeling.The insights help businesses understand user satisfaction and improve strategies.Visualizations like word clouds and sentiment charts enhance interpretability.',
       image: Images.ProjectThumbs.SentimentX,
-      technologies: ['Python', 'NLP', 'Word Cloud','TensorFlow', 'Machine Learning'],
+      technologies: ['Python', 'NLP', 'Word Cloud', 'TensorFlow', 'Machine Learning'],
       tags: ['E-Commerce Reviews', 'Machine Learning'],
       githubUrl: 'https://github.com/DineshhNT/SENTIMENTAL-ANALYSIS-USING-PYTHON',
       liveUrl: 'https://github.com/DineshhNT',
       showTeam: true,
-      teamMembers: [
-        { name: 'Deenathayalan C K', image: Images.Teammembers.member2 }
-      ]
+      teamMembers: [{ name: 'Deenathayalan C K', image: Images.Teammembers.member2 }]
     },
     {
       title: 'Code Flux',
@@ -115,23 +113,57 @@ const Projects = () => {
     }
   ];
 
+  const filterMap: Record<string, (project: typeof projects[0]) => boolean> = {
+    Web: (project) =>
+      project.tags.includes('React') ||
+      project.tags.includes('Full-Stack') ||
+      project.tags.includes('Portfolio'),
+    'Deep Learning': (project) => project.technologies.includes('Deep Learning'),
+    'Machine Learning': (project) => project.technologies.includes('Machine Learning')
+  };
+
+  const filteredProjects = projects.filter((project) => {
+    if (selectedFilter === 'All') return true;
+    return filterMap[selectedFilter]?.(project);
+  });
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200 relative">
       <ProjectNavbar />
 
-      {/* Project Cards */}
       <div className="py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-center mb-12 text-gray-400 dark:text-white pt-10">
-          From building web apps to developing AI/ML systems, here’s a glimpse of my work.
+            From building web apps to developing AI/ML systems, here’s a glimpse of my work.
           </h1>
+
+          <div className="flex justify-center mb-12">
+          <div className="flex rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 p-[3px]">
+  <div className="flex bg-white dark:bg-gray-900 rounded-full overflow-hidden">
+    {['All', 'Web', 'Deep Learning', 'Machine Learning'].map((filter) => (
+      <button
+        key={filter}
+        onClick={() => setSelectedFilter(filter)}
+        className={`px-10 py-5 text-base font-semibold transition-all duration-300 ${
+          selectedFilter === filter
+            ? 'bg-gray-100 text-black dark:bg-gray-800 dark:text-white'
+            : 'text-black dark:text-white hover:bg-white/10'
+        }`}
+      >
+        {filter.toUpperCase()}
+      </button>
+    ))}
+  </div>
+</div>
+</div>
+          {/* Project Cards */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {projects.map((project, index) => (
+            {filteredProjects.map((project, index) => (
               <ProjectCard key={index} {...project} />
             ))}
           </motion.div>

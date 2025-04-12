@@ -35,12 +35,12 @@ const ProjectNavbar = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-4 py-1.5 rounded-full border border-gray-400 dark:border-gray-300  font-bold text-sm sm:text-base text-gray-700 dark:text-white hover:text-[#1c64f2] dark:hover:text-[#4ca6ff] transition-colors"
+            className="px-4 py-1.5 rounded-full border-2 border-black dark:border-white  font-bold text-sm sm:text-base text-gray-700 dark:text-white hover:text-[#1c64f2] dark:hover:text-[#4ca6ff] transition-colors"
             onClick={()=> navigate(-1)}
           >
             Back
           </motion.button>
-          <div className="flex justify-center">
+          <div className="flex justify-center dark:text-white">
             Projects Page
           </div>
         </div>

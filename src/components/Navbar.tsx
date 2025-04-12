@@ -32,7 +32,7 @@ const Navbar = () => {
   };
 
   return (
-    <motion.nav
+    <motion.nav 
       initial={{ y: -100 }}
       animate={{ y: isVisible ? 0 : "-100%" }}
       transition={{ duration: 0.15, ease: "easeInOut" }}
