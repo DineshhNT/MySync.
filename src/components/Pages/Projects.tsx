@@ -131,46 +131,46 @@ const Projects = () => {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200 relative">
       <ProjectNavbar />
 
-      <div className="py-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-center mb-12 text-gray-400 dark:text-white pt-10">
-            From building web apps to developing AI/ML systems, here’s a glimpse of my work.
-          </h1>
+      <div className="py-14 md:py-20 px-3 sm:px-6 lg:px-8">
+        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-6 sm:mb-10 md:mb-12 text-gray-400 dark:text-white pt-6 sm:pt-8 md:pt-10">
+          From building web apps to developing AI/ML systems, here's a glimpse of my work.
+        </h1>
 
-          <div className="flex justify-center mb-12">
-          <div className="flex rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 p-[3px]">
-  <div className="flex bg-white dark:bg-gray-900 rounded-full overflow-hidden">
-    {['All', 'Web', 'Deep Learning', 'Machine Learning'].map((filter) => (
-      <button
-        key={filter}
-        onClick={() => setSelectedFilter(filter)}
-        className={`px-10 py-5 text-base font-semibold transition-all duration-300 ${
-          selectedFilter === filter
-            ? 'bg-gray-100 text-black dark:bg-gray-800 dark:text-white'
-            : 'text-black dark:text-white hover:bg-white/10'
-        }`}
-      >
-        {filter.toUpperCase()}
-      </button>
-    ))}
-  </div>
-</div>
-</div>
-          {/* Project Cards */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {filteredProjects.map((project, index) => (
-              <ProjectCard key={index} {...project} />
-            ))}
-          </motion.div>
+        {/* Optimized Filter Bar */}
+        <div className="flex justify-center mb-6 sm:mb-10 md:mb-12 px-1">
+          <div className="inline-flex rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 p-0.5 sm:p-[2px] shadow-md dark:shadow-none">
+            <div className="flex bg-white dark:bg-gray-900 rounded-full overflow-hidden p-1 sm:p-2">
+              {['All', 'Deep Learning', 'Web', 'Machine Learning'].map((filter) => (
+                <button
+                  key={filter}
+                  onClick={() => setSelectedFilter(filter)}
+                  className={`px-2.5 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-[9px] xs:text-[10px] sm:text-xs md:text-sm font-medium md:font-semibold transition-all duration-200 whitespace-nowrap ${
+                    selectedFilter === filter
+                      ? 'bg-gray-100 text-black dark:bg-gray-800 dark:text-white'
+                      : 'text-black dark:text-white hover:bg-white/10'
+                  } rounded-full`}
+                >
+                  {filter.toUpperCase()}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
+
+        {/* Project Cards */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8"
+        >
+          {filteredProjects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
+        </motion.div>
       </div>
 
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
         <ThemeToggle isDark={isDark} toggleTheme={toggleTheme} />
       </div>
 
